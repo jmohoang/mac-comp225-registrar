@@ -24,9 +24,9 @@ public class Student {
         return enrolledIn;
     }
 
-    public boolean enrollIn(Course c){
-        if(c.enrollIn(this)) {
-            enrolledIn.add(c);
+    public boolean enrollIn(Course courseName){
+        if(courseName.enrollIn(this)) {
+            enrolledIn.add(courseName);
             return true;
         }
         else {
@@ -34,10 +34,10 @@ public class Student {
         }
     }
 
-    public void drop(Course c){
-        if (enrolledIn.contains(c)) {
-            enrolledIn.remove(c);
+    public void drop(Course courseName){
+        if (enrolledIn.contains(courseName)) {
+            enrolledIn.remove(courseName);
         }
-        c.dropStudent(this);
+        courseName.dropStudent(this);
     }
 }
