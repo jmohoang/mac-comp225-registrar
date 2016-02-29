@@ -79,5 +79,6 @@ public class Course {
             waitlist.remove(name);
         }
     }
+    public void removeEnrollmentLimit(){}
 
 }
